@@ -9,7 +9,7 @@ export function HeroSection() {
 	};
 
 	return (
-		<section className='min-h-screen flex flex-col bg-background'>
+		<section className='flex flex-col bg-background'>
 			{/* Main Hero Content */}
 			<div className='flex flex-col items-center justify-center pt-20 pb-12 md:pb-20'>
 				<div className='flex items-center justify-center'>
