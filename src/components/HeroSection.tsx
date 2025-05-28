@@ -27,8 +27,8 @@ export function HeroSection() {
 							<span className='bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent'>No Templates Needed</span>
 						</h1>
 						<p className='text-lg text-muted-foreground mb-4 md:mb-8 max-w-4xl mx-auto leading-relaxed'>
-							Answer a few simple questions to generate
-							<br className='hidden md:block' /> <b>crystal-clear docs</b> that help AI tools <i>stay on track</i>.
+							Answer a few simple questions to create
+							<br className='hidden md:block' /> <b>simple docs</b> that help AI tools <i>stay on track</i>.
 						</p>
 						<Button variant='default' onClick={scrollToWaitlist} size='lg'>
 							Request Early Access
