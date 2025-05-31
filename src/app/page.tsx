@@ -1,8 +1,4 @@
-'use client';
-
-import { useEffect } from 'react';
-import { useSearchParams } from 'next/navigation';
-import { toast } from 'sonner';
+import { Suspense } from 'react';
 import { HeroSection } from '@/components/HeroSection';
 import { ProductPreviewSection } from '@/components/ProductPreviewSection';
 import { ProblemSection } from '@/components/ProblemSection';
@@ -12,22 +8,14 @@ import { BenefitsSection } from '@/components/BenefitsSection';
 import { ExampleOutputSection } from '@/components/ExampleOutputSection';
 import { CTASection } from '@/components/CTASection';
 import { Footer } from '@/components/Footer';
+import { SearchParamsHandler } from '@/components/SearchParamsHandler';
 
 export default function Home() {
-	const searchParams = useSearchParams();
-
-	useEffect(() => {
-		const success = searchParams.get('success');
-		if (success === 'true') {
-			toast.success('🎉 Thanks for joining the waitlist!', {
-				description: "We'll notify you as soon as CreateADoc is ready!",
-				duration: 3_000,
-			});
-		}
-	}, [searchParams]);
-
 	return (
 		<main className='min-h-screen'>
+			<Suspense fallback={null}>
+				<SearchParamsHandler />
+			</Suspense>
 			<HeroSection />
 			<ProductPreviewSection />
 			<ProblemSection />
