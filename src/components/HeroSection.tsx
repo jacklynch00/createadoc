@@ -1,3 +1,5 @@
+'use client';
+
 import { Button } from '@/components/ui/button';
 import { Badge } from './ui/badge';
 import { SignupCounter } from './SignupCounter';
